@@ -1,0 +1,6 @@
+(define (square x) (* x x))
+(define (sum-of-squares a b) (+ (square a) (square b)))
+(define (exercise a b c) 
+  (sum-of-squares (cond ((and (< a b) (< a c)) b c)
+                        ((and (< b a) (< b c)) a c)
+                        ((and (< c a) (< c b)) a b)))
